@@ -1,6 +1,8 @@
-package supermercado;
+package supermercadoTest;
 
 import org.junit.jupiter.api.Test;
+
+import supermercado.Producto;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;

@@ -1,9 +1,13 @@
-package supermercado;
+package supermercadoTest;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import supermercado.IngresoHorasExtras;
+import supermercado.IngresoNormal;
+import supermercado.Trabajador;
 
 class TrabajadorTest {
 
