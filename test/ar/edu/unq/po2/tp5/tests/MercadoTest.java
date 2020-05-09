@@ -1,19 +1,19 @@
-package ar.edu.unq.po2.tp4.tests;
+package ar.edu.unq.po2.tp5.tests;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import ar.edu.unq.po2.tp4.Agencia;
-import ar.edu.unq.po2.tp4.Caja;
-import ar.edu.unq.po2.tp4.Cliente;
-import ar.edu.unq.po2.tp4.Gas;
-import ar.edu.unq.po2.tp4.Impuesto;
-import ar.edu.unq.po2.tp4.Internet;
-import ar.edu.unq.po2.tp4.ProductoCooperativa;
-import ar.edu.unq.po2.tp4.ProductoEmpresa;
-import ar.edu.unq.po2.tp4.Servicio;
+import ar.edu.unq.po2.tp5.Agencia;
+import ar.edu.unq.po2.tp5.Caja;
+import ar.edu.unq.po2.tp5.Cliente;
+import ar.edu.unq.po2.tp5.Gas;
+import ar.edu.unq.po2.tp5.Impuesto;
+import ar.edu.unq.po2.tp5.Internet;
+import ar.edu.unq.po2.tp5.ProductoCooperativa;
+import ar.edu.unq.po2.tp5.ProductoEmpresa;
+import ar.edu.unq.po2.tp5.Servicio;
 
 class MercadoTest {
 

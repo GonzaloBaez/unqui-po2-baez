@@ -1,4 +1,4 @@
-package ar.edu.unq.po2.tp4;
+package ar.edu.unq.po2.tp5;
 
 public class Impuesto extends Factura{
 	private Double tasaServicio;
