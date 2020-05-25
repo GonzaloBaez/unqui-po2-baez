@@ -1,4 +1,4 @@
-package ar.edu.unq.po2.tp6.ejercicio1;
+package ar.edu.unq.po2.tp5SOLID.ejercicio1;
 
 import java.util.ArrayList;
 import java.util.List;

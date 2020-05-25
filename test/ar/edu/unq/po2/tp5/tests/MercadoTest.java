@@ -31,10 +31,10 @@ class MercadoTest {
 		cliente1 = new Cliente("pepito");
 		leche = new ProductoCooperativa(100d,5);
 		chocolate = new ProductoEmpresa(50d,10);
-		internet = new Servicio(5d,100d,fibertel);
-		gas = new Impuesto(2500d,metrogas);
 		fibertel = new Internet();
 		metrogas = new Gas();
+		internet = new Servicio(5d,100d,fibertel);
+		gas = new Impuesto(2500d,metrogas);
 	}
 	@Test
 	void compra2Lechesy3Chocolates() {
