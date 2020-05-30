@@ -5,9 +5,11 @@ import java.util.List;
 public class PropiedadEnComun extends Filtro{
 
 	@Override
-	public List<WikipediaPage> getSimilarPages() {
-		
+	public List<WikipediaPage> getSimilarPages(WikipediaPage pagina, List<WikipediaPage> listaDePaginas) {
+		// TODO Auto-generated method stub
 		return null;
 	}
+
+	
 
 }
