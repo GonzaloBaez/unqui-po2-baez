@@ -14,7 +14,7 @@ public class Counter {
 		// cuenta cuantos pares hay en la lista
 		int pares = 0;
 		for (int numero:numeros) {
-			if(numero%2 == 0) {
+			if(this.esPar(numero)) {
 				pares++;
 			}
 		}
@@ -24,7 +24,7 @@ public class Counter {
 	public int getUnevenOcurrences(){
 		int impares= 0;
 		for(int numero:numeros) {
-			if(numero==1 || numero%2 == 1) {
+			if(numero==1 || this.noEsPar(numero)) {
 				impares++;
 			}
 		}
@@ -34,10 +34,22 @@ public class Counter {
 	public int multiplosDe(int a) {
 		int multiplos = 0;
 		for(int numero:numeros) {
-			if(numero%a==0) {
+			if(this.esMultiploDe(numero, a)) {
 				multiplos++;
 			}
 		}
 		return multiplos;
+	}
+	
+	public boolean esPar(int numero) {
+		return numero%2 == 0;
+	}
+	
+	public boolean noEsPar(int numero) {
+		return !this.esPar(numero);
+	}
+	
+	public boolean esMultiploDe(int numeroPosibleMultiplo,int numero) {
+		return numeroPosibleMultiplo%numero==0;
 	}
 }

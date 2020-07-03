@@ -13,8 +13,8 @@ public class PokerStatus {
 	}
 
 
-	public String verificar(String primeraCarta,String segundaCarta, String terceraCarta,String cuartaCarta,String quintaCarta) {
-		ArrayList<String> cartasEnMano = new ArrayList<String>();
+	public String verificar(Carta primeraCarta,Carta segundaCarta, Carta terceraCarta,Carta cuartaCarta,Carta quintaCarta) {
+		ArrayList<Carta> cartasEnMano = new ArrayList<Carta>();
 		cartasEnMano.add(primeraCarta);
 		cartasEnMano.add(segundaCarta);
 		cartasEnMano.add(terceraCarta);
@@ -35,12 +35,12 @@ public class PokerStatus {
 		return this.jugadaActual;
 	}
 	
-	public boolean esPoker(ArrayList<String> cartasEnMano) {
+	public boolean esPoker(ArrayList<Carta> cartasEnMano) {
 		int cantidadCartasIguales = 1;
-		for(String carta:cartasEnMano) {
-			for(String cartaAverificar:cartasEnMano) {
+		for(Carta carta:cartasEnMano) {
+			for(Carta cartaAverificar:cartasEnMano) {
 				if(	cartasEnMano.indexOf(carta)!= cartasEnMano.indexOf(cartaAverificar)&& 
-					cartaAverificar.charAt(0)==carta.charAt(0)) {
+					cartaAverificar.getValor()==carta.getValor()) {
 					cantidadCartasIguales += 1;
 				}
 			}
@@ -51,24 +51,23 @@ public class PokerStatus {
 		return cantidadCartasIguales == 4;
 	}
 	
-	public boolean esColor(ArrayList<String> cartasEnMano) {
+	public boolean esColor(ArrayList<Carta> cartasEnMano) {
 		int cantidadCartasIguales = 1;
-		String primeraCarta = cartasEnMano.get(0);
-		char paloDeCarta= primeraCarta.charAt(primeraCarta.length()-1);
-		for(String carta:cartasEnMano) {
-			if(paloDeCarta == carta.charAt(primeraCarta.length()-1)) {
+		Carta primeraCarta = cartasEnMano.get(0);
+		for(Carta carta:cartasEnMano) {
+			if(primeraCarta.esDelMismoPalo(carta)) {
 				cantidadCartasIguales +=1;
 			}
 		}
 		return cantidadCartasIguales>=5;
 	}
 	
-	public boolean esTrio(ArrayList<String> cartasEnMano) {
+	public boolean esTrio(ArrayList<Carta> cartasEnMano) {
 		int cantidadCartasIguales = 1;
-		for(String carta:cartasEnMano) {
-			for(String cartaAverificar:cartasEnMano) {
+		for(Carta carta:cartasEnMano) {
+			for(Carta cartaAverificar:cartasEnMano) {
 				if(	cartasEnMano.indexOf(carta)!= cartasEnMano.indexOf(cartaAverificar)&& 
-					cartaAverificar.charAt(0)==carta.charAt(0)) {
+					cartaAverificar.getValor()==carta.getValor()) {
 					cantidadCartasIguales += 1;
 				}
 			}

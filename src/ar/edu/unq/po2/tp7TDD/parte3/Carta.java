@@ -1,6 +1,5 @@
 package ar.edu.unq.po2.tp7TDD.parte3;
 
-
 public class Carta {
 
 	Valor valor;
